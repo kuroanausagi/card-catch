@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>企画提案書 - プロジェクトアーカイブ</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <button class="hamburger" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="page-wrapper">
+    <aside class="sidebar" data-nav-level="docs"></aside>
+
+    <main class="main-content">
+      <header class="doc-header">
+        <div class="doc-category">DOCUMENT 01</div>
+        <h1 class="doc-title">企画提案書</h1>
+        <div class="doc-meta">
+          <span><span class="material-symbols-outlined icon-sm">calendar_today</span> 作成日：2026-XX-XX</span>
+          <span><span class="material-symbols-outlined icon-sm">person</span> 作成者：（氏名を入力）</span>
+          <span><span class="material-symbols-outlined icon-sm">push_pin</span> Ver 1.0</span>
+        </div>
+      </header>
+
+      <div class="doc-body">
+
+        <div class="external-link-box">
+          <div class="external-link-box-title">
+            <span class="material-symbols-outlined">link</span>
+            詳細ドキュメント（Google スプレッドシート）
+          </div>
+          <div class="external-link-box-desc">
+            このページは概要のみを記載しています。詳細な企画提案書は以下のリンクからご確認ください。
+          </div>
+          <div class="external-link-input">
+            <input type="text" placeholder="https://docs.google.com/spreadsheets/d/xxxxx" id="external-link-01">
+            <a href="#" class="link-btn"
+              onclick="window.open(document.getElementById('external-link-01').value || 'https://docs.google.com', '_blank'); return false;">
+              <span class="material-symbols-outlined">open_in_new</span>
+              開く
+            </a>
+          </div>
+        </div>
+
+        <div class="toc">
+          <div class="toc-title">目次</div>
+          <ol class="toc-list">
+            <li><a href="#sec1">プロジェクト概要</a></li>
+            <li><a href="#sec2">背景と課題</a></li>
+            <li><a href="#sec3">提案するソリューション</a></li>
+            <li><a href="#sec4">制作範囲</a></li>
+            <li><a href="#sec5">使用技術</a></li>
+            <li><a href="#sec6">スケジュール</a></li>
+          </ol>
+        </div>
+
+        <section class="section" id="sec1">
+          <h2 class="section-title"><span class="section-icon">1</span> プロジェクト概要</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">サービス名 <span class="required">必須</span></div>
+            <div class="fill-hint">制作するWebサービスの名前</div>
+            <div class="fill-content">
+              Card Catch（カードキャッチ）
+            </div>
+          </div>
+          <div class="fill-block">
+            <div class="fill-label">コンセプト <span class="required">必須</span></div>
+            <div class="fill-hint">サービスを一言で表す説明（キャッチコピー＋1〜2文の説明）</div>
+            <div class="fill-content">
+              抽選応募から受け取りまで、トレカ購入の進捗をまとめて管理するWebサービス。
+            </div>
+          </div>
+          <div class="fill-block">
+            <div class="fill-label">ターゲットユーザー <span class="required">必須</span></div>
+            <div class="fill-hint">このサービスを使う主なユーザー像（概要レベル）</div>
+            <div class="fill-content">
+              ポケモンカードやワンピースカードなどのトレーディングカード抽選に複数店舗から応募し、当落確認や購入手続き、受取期限の管理に負担を感じている人。
+            </div>
+          </div>
+
+        </section>
+
+        <section class="section" id="sec2">
+          <h2 class="section-title"><span class="section-icon">2</span> 背景と課題</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">市場の現状 <span class="required">必須</span></div>
+            <div class="fill-hint">このサービスが存在する市場の現状と課題</div>
+            <div class="fill-content">
+              トレーディングカードの抽選販売は、カードショップ、家電量販店、公式アプリなど複数の窓口で実施されており、申込日、当落発表日、結果確認方法、購入手続き、受取期限が店舗ごとに異なる。
+            </div>
+          </div>
+          <div class="fill-block">
+            <div class="fill-label">解決すべき課題 <span class="required">必須</span></div>
+            <div class="fill-hint">本プロジェクトで解決を目指す具体的な課題（3つ程度）</div>
+            <div class="fill-content">
+              <p>
+                1. 応募情報が複数の店舗、アプリ、X、メールなどに分散しており、一元管理しづらい。<br>
+                2. 当落確認方法や発表タイミングが店舗ごとに異なるため、確認漏れや判断ミスが起きやすい。<br>
+                3. 当選後も購入手続き、前金支払い、再来店、受取期限、レシート管理などが必要で、受取完了までの管理が複雑である。
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="section" id="sec3">
+          <h2 class="section-title"><span class="section-icon">3</span> 提案するソリューション</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">サービスの特長 <span class="required">必須</span></div>
+            <div class="fill-hint">競合と差別化するサービスの特長を3つ</div>
+            <div class="fill-content">
+              <p>
+                1. 複数店舗の抽選応募情報を一元管理できる。<br>
+                2. 当落発表日や次に必要な手続きを分かりやすく確認できる。<br>
+                3. 当選後の購入手続きから受取完了まで進捗を管理できる。
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="section" id="sec4">
+          <h2 class="section-title"><span class="section-icon">4</span> 制作範囲</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">Webサイト（フロントエンド）の範囲 <span class="required">必須</span></div>
+            <div class="fill-hint">制作するWebサイトのページ一覧と概要</div>
+            <div class="fill-content">
+              <p>
+                トップ画面、抽選情報一覧、抽選情報登録、詳細表示、編集、検索、ステータス確認など、ユーザーが操作する画面を作成する。
+                PCとスマートフォンの両方で使いやすいよう、レスポンシブ対応を行う。
+              </p>
+            </div>
+          </div>
+          <div class="fill-block">
+            <div class="fill-label">Webアプリケーション（サーバーサイド）の範囲 <span class="required">必須</span></div>
+            <div class="fill-hint">制作するWebアプリケーションの機能概要</div>
+            <div class="fill-content">
+              <p>
+                抽選情報の登録・表示・編集・削除、検索、ステータス管理などの機能をSpring Bootで実装する。
+                データベースに抽選情報を保存し、応募から受取完了までの進捗を管理できるようにする。
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="section" id="sec5">
+          <h2 class="section-title"><span class="section-icon">5</span> 使用技術</h2>
+
+          <p>
+            HTML / CSS / JavaScript / Java / Spring Boot / Thymeleaf / MyBatis / MySQL / Git / GitHub / Figma
+          </p>
+          <table class="doc-table">
+            <thead>
+              <tr>
+                <th>区分</th>
+                <th>技術</th>
+                <th>用途</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="template-row">
+                <td>フロントエンド</td>
+                <td>HTML / CSS / JavaScript</td>
+                <td>Webサイト構築</td>
+              </tr>
+              <tr class="template-row">
+                <td>CSSフレームワーク</td>
+                <td>（Tailwind CSS 等）</td>
+                <td>スタイリング効率化</td>
+              </tr>
+              <tr class="template-row">
+                <td>バックエンド</td>
+                <td>Java / Spring Boot</td>
+                <td>Webアプリケーション</td>
+              </tr>
+              <tr class="template-row">
+                <td>テンプレートエンジン</td>
+                <td>Thymeleaf</td>
+                <td>画面表示</td>
+              </tr>
+              <tr class="template-row">
+                <td>O/Rマッピング</td>
+                <td>MyBatis</td>
+                <td>データベース操作</td>
+              </tr>
+              <tr class="template-row">
+                <td>データベース</td>
+                <td>（MySQL / H2 等）</td>
+                <td>データ永続化</td>
+              </tr>
+              <tr class="template-row">
+                <td>デザインツール</td>
+                <td>Figma</td>
+                <td>ワイヤーフレーム・モックアップ</td>
+              </tr>
+              <tr class="template-row">
+                <td>バージョン管理</td>
+                <td>Git / GitHub</td>
+                <td>ソースコード管理・公開</td>
+              </tr>
+              <tr class="template-row">
+                <td>AI活用</td>
+                <td>ChatGPT / Claude</td>
+                <td>プロンプトプログラミング</td>
+              </tr>
+            <tbody>
+              <tr>
+                <td>9/10〜9/15</td>
+                <td>企画</td>
+                <td>テーマ整理・ペルソナ・企画提案書・市場分析</td>
+              </tr>
+              <tr>
+                <td>9/16〜9/18</td>
+                <td>設計</td>
+                <td>MVP・機能一覧・サイトマップ・Figma・DB設計</td>
+              </tr>
+              <tr>
+                <td>9/24〜10/1</td>
+                <td>実装</td>
+                <td>Spring Boot・CRUD・検索・ステータス管理・レスポンシブ対応</td>
+              </tr>
+              <tr>
+                <td>10/5</td>
+                <td>テスト</td>
+                <td>動作確認・バグ修正・テスト報告書</td>
+              </tr>
+              <tr>
+                <td>10/6</td>
+                <td>提出</td>
+                <td>README・振り返り・GitHub・最終確認</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ペルソナシート - プロジェクトアーカイブ</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <button class="hamburger" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="page-wrapper">
+    <aside class="sidebar" data-nav-level="docs"></aside>
+
+    <main class="main-content">
+      <header class="doc-header">
+        <div class="doc-category">DOCUMENT 03</div>
+        <h1 class="doc-title">ペルソナシート</h1>
+        <div class="doc-meta">
+          <span><span class="material-symbols-outlined icon-sm">calendar_today</span> 作成日：2026-XX-XX</span>
+          <span><span class="material-symbols-outlined icon-sm">person</span> 作成者：（氏名を入力）</span>
+          <span><span class="material-symbols-outlined icon-sm">push_pin</span> Ver 1.0</span>
+        </div>
+      </header>
+
+      <div class="doc-body">
+
+        <div class="external-link-box">
+          <div class="external-link-box-title">
+            <span class="material-symbols-outlined">link</span>
+            詳細ドキュメント（Google スプレッドシート）
+          </div>
+          <div class="external-link-box-desc">
+            このページは概要のみを記載しています。詳細なペルソナシートは以下のリンクからご確認ください。
+          </div>
+          <div class="external-link-input">
+            <input type="text" placeholder="https://docs.google.com/spreadsheets/d/xxxxx" id="external-link-03">
+            <a href="#" class="link-btn"
+              onclick="window.open(document.getElementById('external-link-03').value || 'https://docs.google.com', '_blank'); return false;">
+              <span class="material-symbols-outlined">open_in_new</span>
+              開く
+            </a>
+          </div>
+        </div>
+
+        <div class="toc">
+          <div class="toc-title">目次</div>
+          <ol class="toc-list">
+            <li><a href="#sec1">基本プロフィール</a></li>
+            <li><a href="#sec2">ライフスタイル</a></li>
+            <li><a href="#sec3">デジタル行動</a></li>
+            <li><a href="#sec4">課題とニーズ</a></li>
+            <li><a href="#sec5">カスタマージャーニーマップ</a></li>
+          </ol>
+        </div>
+
+
+        <section class="section" id="sec1">
+          <h2 class="section-title"><span class="section-icon">1</span> 基本プロフィール</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">ペルソナ基本情報 <span class="required">必須</span></div>
+            <div class="fill-hint">架空の人物として具体的に設定してください</div>
+            <div class="fill-content">
+              <p>佐藤 覚（さとう さとし）／34歳／男性／東京都在住／法人営業／年収500万円前後／独身・一人暮らし。
+                外回りが多く、直行直帰やフレックスタイムを利用できる働き方をしている。
+                子どもの頃からポケモンが好きで、大人になってからポケモンカードを継続・再開。
+                新商品のたびに複数店舗の抽選へ応募し、X、メール、アプリ、店舗サイトで情報を確認する。
+                現在はスマートフォンのメモで申込日、店舗名、商品名、当落発表日などを管理している。
+              </p>
+
+            </div>
+          </div>
+
+        </section>
+
+        <section class="section" id="sec2">
+          <h2 class="section-title"><span class="section-icon">2</span> ライフスタイル</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">平日のタイムスケジュール <span class="required">必須</span></div>
+            <div class="fill-hint">朝起きてから寝るまでの1日の流れ</div>
+            <div class="fill-content">
+              <p>
+                8:30ごろ起床・出勤準備。10:00〜12:00は営業活動を行う。
+                昼休みにはメールやアプリで抽選結果を軽く確認する。
+                13:00〜18:00は外回り営業を行い、直帰できる日は仕事終わりに池袋・秋葉原・新宿などのカードショップを回る。
+                22:00〜23:30ごろにX、店舗サイト、アプリを確認し、抽選情報の収集や応募をまとめて行う。
+                その後、当落結果、受取予定、カード相場などをスマートフォンのメモに整理し、1:00前後に就寝する。
+              </p>
+            </div>
+          </div>
+          <div class="fill-block">
+            <div class="fill-label">休日の過ごし方 <span class="required">必須</span></div>
+            <div class="fill-hint">休日にどのように過ごしているか</div>
+            <div class="fill-content">
+              <p>
+                休日は池袋・秋葉原・新宿などのカードショップを回り、抽選受付やゲリラ販売、再入荷情報を確認する。
+                ポケモンカードは収集だけでなく対戦も楽しんでおり、カードショップやイベント会場で開催される大会にも参加する。
+                新商品の発売時期には複数店舗を巡回し、必要に応じてカードの購入や売却も行う。
+                移動中や帰宅後はX、店舗サイト、フリマアプリなどで販売情報やカード相場を確認する。
+                抽選に当選している場合は、店舗での予約手続き、前金の支払い、受け取りなども休日にまとめて行う。
+              </p>
+
+            </div>
+          </div>
+          <div class="fill-block">
+            <div class="fill-label">趣味・関心事 <span class="required">必須</span></div>
+            <div class="fill-hint">興味のある分野・趣味</div>
+            <div class="fill-content">
+              <p>
+                ポケモンカードの収集と対戦が趣味で、カードショップやイベント会場で開催される大会にも参加している。
+                Xで公式アカウントやカードショップの情報をチェックし、抽選販売、再入荷、ゲリラ販売の情報を日常的に収集している。
+                また、カードの相場や価格推移も確認し、必要に応じてカードの売買を行う。
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="section" id="sec3">
+          <h2 class="section-title"><span class="section-icon">3</span> デジタル行動</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">使用デバイス・サービス <span class="required">必須</span></div>
+            <div class="fill-hint">日常的に使用するデバイス、SNS、Webサービス</div>
+            <div class="fill-content">
+              <p>
+                メイン端末はiPhone 16を使用しており、X、メール、カードショップや量販店のアプリ、店舗サイトで抽選情報や当落結果を確認している。
+                自宅ではWindowsノートPCを使用し、複数の販売サイトを比較したり、夜にまとめて抽選応募や情報整理を行う。
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="section" id="sec4">
+          <h2 class="section-title"><span class="section-icon">4</span> 課題とニーズ</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">抱えている課題・悩み <span class="required">必須</span></div>
+            <div class="fill-hint">このペルソナが日常で抱えている課題（サービスに関連するもの）</div>
+            <div class="fill-content">
+              <p>
+                複数店舗のポケモンカード抽選に応募しており、店舗ごとに申込日、当落発表日、結果の確認方法が異なるため、情報管理に手間がかかっている。
+                当落確認にはX、メール、アプリ、店舗サイトなど複数の手段があり、「当選者のみに連絡」の場合は落選判断のタイミングも分かりにくい。
+                また、当選後も購入手続き、住所入力、前金の支払い、店舗での予約、発売日の再来店、受取期限の管理などが必要になる。
+                さらに、受け取りに必要なレシートや予約票をなくさないように管理する必要もあり、応募から受け取りまで一連の作業を忘れずに管理することに負担を感じている。
+              </p>
+            </div>
+          </div>
+          <div class="fill-block">
+            <div class="fill-label">サービスに期待すること <span class="required">必須</span></div>
+            <div class="fill-hint">このペルソナが（サービス名）に期待する価値</div>
+            <div class="fill-content">
+              <p>
+                複数店舗の抽選情報を一か所で管理し、当落発表日や次に必要な手続きがすぐ分かること。
+                当選後の購入手続き、前金支払い、受取期限、再来店予定まで忘れず管理できること。
+                「今日確認すること」「次にやること」が一覧で分かり、確認漏れや受け取り忘れを防げること。
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="section" id="sec5">
+          <h2 class="section-title"><span class="section-icon">5</span> カスタマージャーニーマップ</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">カスタマージャーニーマップ <span class="required">必須</span></div>
+            <div class="fill-hint">ペルソナがサービスを認知してから利用・共有するまでの行動を時系列で記載</div>
+
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>段階</th>
+                  <th>行動</th>
+                  <th>接点（タッチポイント）</th>
+                  <th>感情</th>
+                  <th>課題・機会</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="template-row">
+                  <td><strong>認知</strong></td>
+                  <td>Xなどでポケモンカード抽選管理サービスの存在を知る</td>
+                  <td>X、検索</td>
+                  <td>😮 こんなのあるんだ</td>
+                  <td>今はスマートフォンのメモだけで管理しており、もっと楽に管理できる方法を知らない</td>
+                </tr>
+
+                <tr class="template-row">
+                  <td><strong>興味</strong></td>
+                  <td>機能を見て、自分の抽選管理に使えそうか確認する</td>
+                  <td>Webサイト、紹介ページ</td>
+                  <td>🙂 当落日や受取までまとめられるなら便利そう</td>
+                  <td>自分が普段管理している項目を登録できるか分からない</td>
+                </tr>
+
+                <tr class="template-row">
+                  <td><strong>比較検討</strong></td>
+                  <td>スマートフォンのメモ、カレンダー、スプレッドシートなどと比べる</td>
+                  <td>Webサイト、既存の管理方法</td>
+                  <td>🤔 今のメモより本当に楽になるかな</td>
+                  <td>入力の手間以上にメリットがあることを分かりやすく伝える必要がある</td>
+                </tr>
+
+                <tr class="template-row">
+                  <td><strong>行動</strong></td>
+                  <td>抽選情報を登録し、当落確認や当選後の手続きを管理する</td>
+                  <td>Webアプリ</td>
+                  <td>😊 今日やることが分かる</td>
+                  <td>操作が複雑だと使わなくなるため、少ない操作で登録・更新できる必要がある</td>
+                </tr>
+
+                <tr class="template-row">
+                  <td><strong>共有・継続</strong></td>
+                  <td>新しい抽選があるたびに使い、応募から受取完了まで継続して管理する</td>
+                  <td>Webアプリ、X</td>
+                  <td>😍 もうメモだけの管理には戻りにくい</td>
+                  <td>継続して使いたくなる見やすさや、確認漏れを防ぐ仕組みが必要</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

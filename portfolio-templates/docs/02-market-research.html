@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>マーケットリサーチ - プロジェクトアーカイブ</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <button class="hamburger" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="page-wrapper">
+    <aside class="sidebar" data-nav-level="docs"></aside>
+
+    <main class="main-content">
+      <header class="doc-header">
+        <div class="doc-category">DOCUMENT 02</div>
+        <h1 class="doc-title">マーケットリサーチ</h1>
+        <div class="doc-meta">
+          <span><span class="material-symbols-outlined icon-sm">calendar_today</span> 作成日：2026-XX-XX</span>
+          <span><span class="material-symbols-outlined icon-sm">person</span> 作成者：（氏名を入力）</span>
+          <span><span class="material-symbols-outlined icon-sm">push_pin</span> Ver 1.0</span>
+        </div>
+      </header>
+
+      <div class="doc-body">
+
+        <div class="external-link-box">
+          <div class="external-link-box-title">
+            <span class="material-symbols-outlined">link</span>
+            詳細ドキュメント（Google スプレッドシート）
+          </div>
+          <div class="external-link-box-desc">
+            このページは概要のみを記載しています。詳細なマーケットリサーチは以下のリンクからご確認ください。
+          </div>
+          <div class="external-link-input">
+            <input type="text" placeholder="https://docs.google.com/spreadsheets/d/xxxxx" id="external-link-02">
+            <a href="#" class="link-btn"
+              onclick="window.open(document.getElementById('external-link-02').value || 'https://docs.google.com', '_blank'); return false;">
+              <span class="material-symbols-outlined">open_in_new</span>
+              開く
+            </a>
+          </div>
+        </div>
+
+        <div class="toc">
+          <div class="toc-title">目次</div>
+          <ol class="toc-list">
+            <li><a href="#sec1">3C分析</a></li>
+            <li><a href="#sec2">SWOT分析</a></li>
+            <li><a href="#sec3">STP分析</a></li>
+            <li><a href="#sec4">4P / 4C 分析</a></li>
+            <li><a href="#sec5">競合サイト分析</a></li>
+          </ol>
+        </div>
+
+        <section class="section" id="sec1">
+          <h2 class="section-title"><span class="section-icon">1</span> 3C分析</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">Customer（顧客） <span class="required">必須</span></div>
+            <div class="fill-hint">ターゲット顧客の特徴・ニーズ・行動パターン</div>
+            <div class="fill-content">
+              <p>
+                複数のカードショップや量販店で、ポケモンカード、ONE PIECEカード、遊戯王、デュエル・マスターズなどのトレーディングカード抽選に継続的に応募するユーザー。
+                X、メール、店舗アプリ、Webサイトなど複数の情報源を確認しており、当落発表日や購入手続き、受取期限の管理に負担を感じている。
+                当選後も前金支払い、再来店、住所入力、受け取りなど複数の手続きが発生するため、「今日何を確認するか」「次に何をするか」を簡単に把握したいというニーズがある。
+              </p>
+            </div>
+          </div>
+          <div class="fill-block">
+            <div class="fill-label">Competitor（競合） <span class="required">必須</span></div>
+            <div class="fill-hint">競合サービスの特徴・強み・弱み</div>
+            <div class="fill-content">
+              <p>
+                競合・代替手段として、スマートフォンのメモ、Googleカレンダー、Googleスプレッドシート、各カードショップや量販店の公式アプリ、Xなどがある。
+                これらは個別の情報確認や予定管理には使えるが、抽選応募から当落確認、購入手続き、受取完了までを一元管理することには向いていない。
+                また、店舗ごとに確認方法や手続きが異なるため、ユーザー自身が複数のサービスを行き来して管理する必要がある。
+              </p>
+            </div>
+          </div>
+          <div class="fill-block">
+            <div class="fill-label">Company（自社） <span class="required">必須</span></div>
+            <div class="fill-hint">自分のサービスの強み・提供できる価値</div>
+            <div class="fill-content">
+              <p>
+                Card Catchは、トレーディングカードの抽選応募から当落確認、購入手続き、受取完了までを一元管理できるWebサービスである。
+                複数店舗の情報をまとめて管理し、「今日確認すること」「次にやること」を分かりやすく表示することで、確認漏れや手続き忘れを防ぐ。
+                将来的には、販売情報、再入荷情報、カード相場、買取価格なども確認できるサービスへの拡張を想定している。
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="section" id="sec2">
+          <h2 class="section-title"><span class="section-icon">2</span> SWOT分析</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">SWOT分析マトリクス <span class="required">必須</span></div>
+            <div class="fill-hint">Strengths（強み）・Weaknesses（弱み）・Opportunities（機会）・Threats（脅威）</div>
+
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>プラス要因</th>
+                  <th>マイナス要因</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="template-row">
+                  <td><strong>内部環境</strong></td>
+                  <td>
+                    <strong>Strengths（強み）</strong><br>
+                    ・抽選応募から受取完了まで一元管理できる。<br>
+                    ・「今日確認すること」「次にやること」が分かりやすい。<br>
+                    ・前金支払い、再来店、受取期限など、トレカ抽選特有の情報を管理できる。
+                  </td>
+                  <td><strong>Weaknesses（弱み）</strong><br>
+                    ・抽選情報をユーザー自身が入力する必要があり、最初の登録に手間がかかる。<br>
+                    ・X、メール、各店舗アプリなどから情報を自動取得できないため、完全な自動化ではない。<br>
+                    ・入力内容が間違っていると、当落日や受取期限の管理も正しく行えない。
+                  </td>
+                </tr>
+                <tr class="template-row">
+                  <td><strong>外部環境</strong></td>
+                  <td>
+                    <strong>Opportunities（機会）</strong><br>
+                    ・トレーディングカードの抽選販売や限定販売が多く、複数店舗へ応募するユーザーがいる。<br>
+                    ・X、アプリ、Webサイトなど情報源が分散しており、一元管理への需要がある。<br>
+                    ・将来的に販売情報、再入荷情報、カード相場、買取価格などへ機能を拡張できる可能性がある。
+                  </td>
+                  <td>
+                    <strong>Threats（脅威）</strong><br>
+                    ・スマートフォンのメモやカレンダーなど、無料で使える代替手段がすでに存在する。<br>
+                    ・カードショップや販売サイト側の仕様変更により、必要な管理項目が変わる可能性がある。<br>
+                    ・入力の手間が大きいと、ユーザーが継続して使わなくなる可能性がある。
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </section>
+
+        <section class="section" id="sec3">
+          <h2 class="section-title"><span class="section-icon">3</span> STP分析</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">Segmentation（市場細分化） <span class="required">必須</span></div>
+            <div class="fill-hint">市場をどのような基準で分類するか</div>
+            <div class="fill-content">
+              <p>
+                トレーディングカードユーザーを、購入方法や利用目的によって分類する。
+                主な区分として、店舗や公式サイトの抽選販売に継続的に応募する人、店頭販売を中心に購入する人、対戦を目的とするプレイヤー、コレクションを重視する人、カード相場を見ながら売買も行う人などがいる。
+              </p>
+            </div>
+          </div>
+          <div class="fill-block">
+            <div class="fill-label">Targeting（ターゲット選定） <span class="required">必須</span></div>
+            <div class="fill-hint">どのセグメントを狙うか、その理由</div>
+            <div class="fill-content">
+              <p>
+                主なターゲットは、ポケモンカード、ONE PIECEカード、遊戯王、デュエル・マスターズなどのトレーディングカード抽選に、複数のカードショップや量販店から継続的に応募しているユーザーとする。
+                特に、当落発表日、確認方法、購入手続き、受取期限などをスマートフォンのメモなどで個別に管理しており、確認漏れや手続き忘れに負担を感じている人を対象とする。
+              </p>
+            </div>
+          </div>
+          <div class="fill-block">
+            <div class="fill-label">Positioning（ポジショニング） <span class="required">必須</span></div>
+            <div class="fill-hint">競合に対してどのような位置づけを取るか</div>
+            <div class="fill-content">
+              <p>
+                Card Catchは、スマートフォンのメモやカレンダーのような一般的な予定管理ではなく、トレーディングカードの抽選応募から当落確認、購入手続き、受取完了までの管理に特化したWebサービスとして位置づける。
+                「今日確認すること」「次にやること」を分かりやすく表示し、複数店舗への応募や当選後の手続きを忘れずに進められる点で、一般的な管理方法との差別化を図る。
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="section" id="sec4">
+          <h2 class="section-title"><span class="section-icon">4</span> 4P / 4C 分析</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">4P・4C分析 <span class="required">必須</span></div>
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>4P（売り手視点）</th>
+                  <th>内容</th>
+                  <th>4C（買い手視点）</th>
+                  <th>内容</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="template-row">
+                  <td><strong>Product</strong><br>（製品）</td>
+                  <td>
+                    トレーディングカードの抽選応募から当落確認、購入手続き、受取完了までを一元管理できるWebサービス。
+                    複数店舗の抽選情報をまとめ、「今日確認すること」「次にやること」を分かりやすく表示することで、確認漏れや手続き忘れを防ぐ。
+                  </td>
+                  <td><strong>Customer Value</strong><br>（顧客価値）</td>
+                  <td>
+                    複数店舗の抽選情報や当選後の手続きを一か所で確認できるため、情報を探し回る負担を減らせる。
+                    また、「今日確認すること」「次にやること」が分かることで、当落確認や購入手続き、受取期限の見落としを防ぎやすくなる。
+                  </td>
+                </tr>
+                <tr class="template-row">
+                  <td><strong>Price</strong><br>（価格）</td>
+                  <td>
+                    無料で利用できるWebサービスとして提供する。
+                    将来的に機能を拡張する場合は、基本機能を無料とし、一部の高度な機能を有料化する可能性も検討する。
+                  </td>
+                  <td><strong>Cost</strong><br>（顧客コスト）</td>
+                  <td>
+                    利用料金は無料とするが、抽選情報や当落結果、受取情報などを自分で入力する手間が発生する。
+                    そのため、できるだけ少ない操作で登録・更新できる画面設計が必要である。
+                  </td>
+                </tr>
+                <tr class="template-row">
+                  <td><strong>Promotion</strong><br>（販促）</td>
+                  <td>
+                    XなどのSNSでサービスの特徴や使い方を発信し、トレーディングカードの抽選管理に困っているユーザーに知ってもらう。
+                    また、ポートフォリオやGitHub Pagesでサービスを公開し、実際の画面や機能を見てもらえるようにする。
+                  </td>
+
+                  <td><strong>Communication</strong><br>（対話）</td>
+                  <td>
+                    利用者からの意見や要望を受け取り、使いにくい点や必要な機能を把握して改善につなげる。
+                    将来的には、問い合わせフォームやSNSなどを通じて利用者の声を集め、継続的にサービスを改善する。
+                  </td>
+                </tr>
+                <td><strong>Price</strong><br>（価格）</td>
+                <td>
+                  無料で利用できるWebサービスとして提供する。
+                  将来的に機能を拡張する場合は、基本機能を無料とし、一部の高度な機能を有料化する可能性も検討する。
+                </td>
+                <td><strong>Cost</strong><br>（顧客コスト）</td>
+                <td>
+                  利用料金は無料とするが、抽選情報や当落結果、受取情報などを自分で入力する手間が発生する。
+                  そのため、できるだけ少ない操作で登録・更新できる画面設計が必要である。
+                </td>
+                </tr>
+                </tr>
+                <tr class="template-row">
+                  <td><strong>Place</strong><br>（流通）</td>
+                  <td>
+                    PCやスマートフォンのWebブラウザから利用できるWebサービスとして提供する。
+                    外出先ではスマートフォンから当落確認や受取予定を確認でき、自宅ではPCからまとめて情報を整理できる。
+                  </td>
+                  <td><strong>Convenience</strong><br>（利便性）</td>
+                  <td>
+                    スマートフォンから外出先でも確認・更新でき、PCからは複数の抽選情報をまとめて整理できる。
+                    また、「今日確認すること」「次にやること」を一覧で表示し、必要な情報へすぐアクセスできるようにする。
+                    <<tr class="template-row">
+                  <td><strong>Promotion</strong><br>（販促）</td>
+                  <td>
+                    XなどのSNSでサービスの特徴や使い方を発信し、トレーディングカードの抽選管理に困っているユーザーに知ってもらう。
+                    また、ポートフォリオやGitHub Pagesでサービスを公開し、実際の画面や機能を見てもらえるようにする。
+                  </td>
+
+                  <td><strong>Communication</strong><br>（対話）</td>
+                  <td>
+                    利用者からの意見や要望を受け取り、使いにくい点や必要な機能を把握して改善につなげる。
+                    将来的には、問い合わせフォームやSNSなどを通じて利用者の声を集め、継続的にサービスを改善する。
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </section>
+
+        <section class="section" id="sec5">
+          <h2 class="section-title"><span class="section-icon">5</span> 競合サイト分析</h2>
+
+
+          <div class="fill-block">
+            <div class="fill-label">競合サイト 1 <span class="required">必須</span></div>
+            <div class="fill-hint">サイト名・URL・スクリーンショット・分析</div>
+            <div class="fill-content">
+              <p>
+                <strong>サイト名：</strong>Google カレンダー<br>
+                <strong>URL：</strong>https://calendar.google.com/<br><br>
+                予定や期限を日付ごとに登録できるため、抽選締切、当落発表日、受取期限などの管理に利用できる。
+                通知機能もあり、予定の確認漏れを防ぎやすい点が強みである。
+                一方で、応募済み・当選・購入手続き・受取完了など、トレーディングカード抽選特有の進捗をまとめて管理する機能はない。
+                Card Catchでは、日付だけでなく抽選から受取完了までの状態を一元管理できる点で差別化する。
+              </p>
+              （スクリーンショットを配置：&lt;img src=&quot;../images/competitor1.png&quot; alt=&quot;競合サイト1&quot;&gt;）</p>
+            </div>
+          </div>
+          <div class="fill-block">
+            <div class="fill-label">競合サイト 2 <span class="required">必須</span></div>
+            <div class="fill-hint">サイト名・URL・スクリーンショット・分析</div>
+            <div class="fill-content">
+              <p>
+                <strong>サイト名：</strong>Google スプレッドシート<br>
+                <strong>URL：</strong>https://docs.google.com/spreadsheets/<br><br>
+                項目を自由に作成できるため、店舗名、商品名、応募日、当落発表日、結果、受取期限などを自分好みに管理できる。
+                複数の抽選情報を一覧で比較できる点が強みである。
+                一方で、管理表の作成や項目設定、入力、更新をすべてユーザー自身が行う必要があり、手間がかかる。
+                Card Catchでは、トレーディングカード抽選に必要な項目を最初から用意し、より少ない操作で管理できる点で差別化する。
+              </p>
+            </div>
+          </div>
+          <div class="fill-block">
+            <div class="fill-label">競合サイト 3 <span class="required">必須</span></div>
+            <div class="fill-hint">サイト名・URL・スクリーンショット・分析</div>
+            <div class="fill-content">
+              <p>
+                <strong>サイト名：</strong>スマートフォンのメモアプリ<br><br>
+                手軽にすぐ入力でき、店舗名や商品名、応募日、当落発表日などを自由に記録できる点が強みである。
+                一方で、情報が文章として並ぶだけになりやすく、応募状況や当選後の手続き、受取期限などを一覧で把握しにくい。
+                また、件数が増えるほど見落としや更新漏れが起きやすい。
+                Card Catchでは、抽選ごとの進捗や期限を整理して表示し、「今日確認すること」「次にやること」を分かりやすくすることで差別化する。
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

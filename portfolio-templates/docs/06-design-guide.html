@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>デザインガイドライン - プロジェクトアーカイブ</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <button class="hamburger" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="page-wrapper">
+    <aside class="sidebar" data-nav-level="docs"></aside>
+
+    <main class="main-content">
+      <header class="doc-header">
+        <div class="doc-category">DOCUMENT 06</div>
+        <h1 class="doc-title">デザインガイドライン</h1>
+        <div class="doc-meta">
+          <span><span class="material-symbols-outlined icon-sm">calendar_today</span> 作成日：2026-XX-XX</span>
+          <span><span class="material-symbols-outlined icon-sm">person</span> 作成者：（氏名を入力）</span>
+          <span><span class="material-symbols-outlined icon-sm">push_pin</span> Ver 1.0</span>
+        </div>
+      </header>
+
+      <div class="doc-body">
+
+        <div class="external-link-box">
+          <div class="external-link-box-title">
+            <span class="material-symbols-outlined">link</span>
+            詳細ドキュメント（Google スプレッドシート）
+          </div>
+          <div class="external-link-box-desc">
+            このページは概要のみを記載しています。詳細なデザインガイドラインは以下のリンクからご確認ください。
+          </div>
+          <div class="external-link-input">
+            <input type="text" placeholder="https://docs.google.com/spreadsheets/d/xxxxx" id="external-link-06">
+            <a href="#" class="link-btn"
+              onclick="window.open(document.getElementById('external-link-06').value || 'https://docs.google.com', '_blank'); return false;">
+              <span class="material-symbols-outlined">open_in_new</span>
+              開く
+            </a>
+          </div>
+        </div>
+
+        <div class="toc">
+          <div class="toc-title">目次</div>
+          <ol class="toc-list">
+            <li><a href="#sec1">デザインコンセプト</a></li>
+            <li><a href="#sec2">カラーパレット</a></li>
+            <li><a href="#sec3">タイポグラフィ</a></li>
+            <li><a href="#sec4">UIコンポーネント</a></li>
+            <li><a href="#sec5">レイアウトルール</a></li>
+          </ol>
+        </div>
+
+        <section class="section" id="sec1">
+          <h2 class="section-title"><span class="section-icon">1</span> デザインコンセプト</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">デザインキーワード <span class="required">必須</span></div>
+            <div class="fill-hint">デザインの方向性を表すキーワード3つとその説明</div>
+            <div class="fill-content">
+              シンプル：情報量が多くても迷わず確認できる、分かりやすい画面にする。
+
+              安心感：応募状況や当落、受取期限を落ち着いて確認できる見た目にする。
+
+              行動しやすい：今日やることや次の操作がすぐ分かる配置にする。
+            </div>
+          </div>
+
+        </section>
+
+        <section class="section" id="sec2">
+          <h2 class="section-title"><span class="section-icon">2</span> カラーパレット</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">カラーパレット <span class="required">必須</span></div>
+            <div class="fill-hint">各色のHEXコード・使用場面を記載し、実際の色見本も表示してください</div>
+
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <td>メインカラー</td>
+                  <td>#2563EB</td>
+                  <td>青</td>
+                  <td>メインボタン、リンク、強調要素、重要なナビゲーション</td>
+
+                <tr>
+                  <td>サブカラー</td>
+                  <td>#DBEAFE</td>
+                  <td>薄い青</td>
+                  <td>セクション背景、補助ボタン、カードやバッジの背景</td>
+                </tr>
+
+                <tr>
+                  <td>背景色</td>
+                  <td>#F8FAFC</td>
+                  <td>薄いグレー</td>
+                  <td>ページ全体の背景</td>
+
+
+                <tr>
+                  <td>テキストカラー</td>
+                  <td>#1F2937</td>
+                  <td>濃いネイビー</td>
+                  <td>見出し、本文、ラベル、説明文</td>
+                </tr>
+                <tr>
+                  <td>アクセントカラー</td>
+                  <td>#10B981</td>
+                  <td>緑</td>
+                  <td>成功・完了表示、進捗、ポジティブな強調</td>
+                </tr>
+                </tbody>
+            </table>
+
+          </div>
+        </section>
+
+        <section class="section" id="sec3">
+          <h2 class="section-title"><span class="section-icon">3</span> タイポグラフィ</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">フォント設定 <span class="required">必須</span></div>
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>要素</th>
+                  <th>フォント名</th>
+                  <th>サイズ</th>
+                  <th>太さ</th>
+                  <th>行間</th>
+                  <th>用途</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="template-row">
+                  <td>h1（大見出し）</td>
+                  <td>Noto Sans JP</td>
+                  <td>32px</td>
+                  <td>700</td>
+                  <td>1.4</td>
+                  <td>ページタイトル</td>
+                </tr>
+                <tr class="template-row">
+                  <td>h2（中見出し）</td>
+                  <td>Noto Sans JP</td>
+                  <td>24px</td>
+                  <td>700</td>
+                  <td>1.5</td>
+                  <td>セクション見出し</td>
+                </tr>
+                <td>h3（小見出し）</td>
+                <td>Noto Sans JP</td>
+                <td>20px</td>
+                <td>700</td>
+                <td>1.5</td>
+                <td>サブセクション</td>
+                </tr>
+                <tr class="template-row">
+                  <td>本文</td>
+                  <td>Noto Sans JP</td>
+                  <td>16px</td>
+                  <td>400</td>
+                  <td>1.8</td>
+                  <td>本文テキスト</td>
+                </tr>
+                <td>ボタン</td>
+                <td>Noto Sans JP</td>
+                <td>16px</td>
+                <td>700</td>
+                <td>1.4</td>
+                <td>ボタンテキスト</td>
+                </tr>
+                <td>ラベル</td>
+                <td>Noto Sans JP</td>
+                <td>14px</td>
+                <td>500</td>
+                <td>1.4</td>
+                <td>フォームラベル、説明文</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </section>
+
+        <section class="section" id="sec4">
+          <h2 class="section-title"><span class="section-icon">4</span> UIコンポーネント</h2>
+
+
+          <div class="fill-block">
+            <div class="fill-label">ボタン <span class="required">必須</span></div>
+            <div class="fill-hint">プライマリ・セカンダリ・デンジャーの3種類のボタンスタイル（実物のHTMLサンプル付き）</div>
+            <div class="fill-content">
+              <p><button style="background:#2563EB;color:white;border:none;padding:10px 16px;">登録</button> <button
+                  style="background:#DBEAFE;color:#1F2937;border:none;padding:10px 16px;">戻る</button> <button
+                  style="background:#dc2626;color:white;border:none;padding:10px 16px;">削除</button></p>
+            </div>
+          </div>
+          <div class="fill-block">
+            <div class="fill-label">フォーム要素 <span class="required">必須</span></div>
+            <div class="fill-hint">テキスト入力・セレクト・テキストエリア・チェックボックス・ラジオボタン（実物のHTMLサンプル付き）</div>
+            <div class="fill-content">
+              <p><input type="text" placeholder="店舗名"> <select>
+                  <option>応募済み</option>
+                  <option>当選</option>
+                </select> <textarea placeholder="メモ"></textarea> <label><input type="checkbox"> 確認済み</label>
+                <label><input type="radio" name="status"> 当選</label>
+              </p>
+            </div>
+          </div>
+          <div class="fill-block">
+            <div class="fill-label">カード・テーブル・その他 <span class="required">必須</span></div>
+            <div class="fill-hint">カードコンポーネント・テーブルスタイル・アラート等（実物のHTMLサンプル付き）</div>
+            <div class="fill-content">
+              <div style="border:1px solid #DBEAFE;padding:16px;"><strong>カードショップA</strong>
+                <p>商品名A / 当選</p>
+              </div>
+              <table border="1" cellpadding="8">
+                <tr>
+                  <th>店舗名</th>
+                  <th>商品名</th>
+                  <th>状態</th>
+                </tr>
+                <tr>
+                  <td>カードショップA</td>
+                  <td>商品名A</td>
+                  <td>当選</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="section" id="sec5">
+          <h2 class="section-title"><span class="section-icon">5</span> レイアウトルール</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">レイアウト基本ルール <span class="required">必須</span></div>
+            <div class="fill-hint">グリッド・余白・角丸・シャドウ等の数値ルール</div>
+            <div class="fill-content">
+              <p>
+              <p>
+                PC版は最大幅1200pxを基準とし、主要コンテンツの余白は24px、要素間は16pxを基本とする。角丸は8px、カードや入力欄には薄い境界線を使用する。スマートフォン版では1カラム表示とし、左右余白を16px確保する。
+              </p>
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

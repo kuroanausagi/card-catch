@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サイトマップ - プロジェクトアーカイブ</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <button class="hamburger" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="page-wrapper">
+    <aside class="sidebar" data-nav-level="docs"></aside>
+
+    <main class="main-content">
+      <header class="doc-header">
+        <div class="doc-category">DOCUMENT 04</div>
+        <h1 class="doc-title">サイトマップ</h1>
+        <div class="doc-meta">
+          <span><span class="material-symbols-outlined icon-sm">calendar_today</span> 作成日：2026-XX-XX</span>
+          <span><span class="material-symbols-outlined icon-sm">person</span> 作成者：（氏名を入力）</span>
+          <span><span class="material-symbols-outlined icon-sm">push_pin</span> Ver 1.0</span>
+        </div>
+      </header>
+
+      <div class="doc-body">
+
+        <div class="external-link-box">
+          <div class="external-link-box-title">
+            <span class="material-symbols-outlined">link</span>
+            詳細ドキュメント（Google スプレッドシート）
+          </div>
+          <div class="external-link-box-desc">
+            このページは概要のみを記載しています。詳細なサイトマップは以下のリンクからご確認ください。
+          </div>
+          <div class="external-link-input">
+            <input type="text" placeholder="https://docs.google.com/spreadsheets/d/xxxxx" id="external-link-04">
+            <a href="#" class="link-btn"
+              onclick="window.open(document.getElementById('external-link-04').value || 'https://docs.google.com', '_blank'); return false;">
+              <span class="material-symbols-outlined">open_in_new</span>
+              開く
+            </a>
+          </div>
+        </div>
+
+        <div class="toc">
+          <div class="toc-title">目次</div>
+          <ol class="toc-list">
+            <li><a href="#sec1">サイト構造図</a></li>
+            <li><a href="#sec2">ページ一覧</a></li>
+            <li><a href="#sec3">ユーザーフロー</a></li>
+            <li><a href="#sec4">URL設計</a></li>
+          </ol>
+        </div>
+
+        <section class="section" id="sec1">
+          <h2 class="section-title"><span class="section-icon">1</span> サイト構造図</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">Webサイト構造図 <span class="required">必須</span></div>
+            <div class="fill-hint">トップページから下層ページまでの階層構造をツリー形式で記載</div>
+            <div class="fill-content">
+              <p>
+                トップページ<br>
+                └─ Card Catch<br>
+                　└─ Webアプリケーション
+              </p>
+            </div>
+          </div>
+          <div class="fill-block">
+            <div class="fill-label">Webアプリケーション構造図 <span class="required">必須</span></div>
+            <div class="fill-hint">Spring Bootアプリケーションの画面構造をツリー形式で記載</div>
+            <div class="fill-content">
+              <p>
+                ダッシュボード<br>
+                ├─ 抽選一覧<br>
+                │　├─ 抽選詳細<br>
+                │　│　└─ 抽選編集<br>
+                │　└─ 抽選登録<br>
+                └─ 今日やること → 抽選詳細
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="section" id="sec2">
+          <h2 class="section-title"><span class="section-icon">2</span> ページ一覧</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">Webサイト ページ一覧 <span class="required">必須</span></div>
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>ページ名</th>
+                  <th>ページの目的</th>
+                  <th>主要コンテンツ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="template-row">
+                  <td>1</td>
+                  <td>トップページ</td>
+                  <td>Card Catchの概要を伝え、Webアプリケーションへ案内する</td>
+                  <td>サービス概要、特徴、Webアプリケーションへの導線</td>
+                </tr>>
+                <tr class="template-row">
+                  <td>2</td>
+                  <td>Card Catch紹介</td>
+                  <td>Card Catchの機能や利用イメージを説明する</td>
+                  <td>機能紹介、利用方法、画面イメージ</td>
+                </tr>
+                <td>3</td>
+                <td>Webアプリケーション</td>
+                <td>Card Catchの各機能を利用する</td>
+                <td>ダッシュボード、抽選一覧、登録、詳細、編集</td>
+                <tr class="template-row">
+                  <td>…</td>
+                  <td>…</td>
+                  <td>…</td>
+                  <td>…</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+
+          <div class="fill-block">
+            <div class="fill-label">Webアプリ 画面一覧 <span class="required">必須</span></div>
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>画面名</th>
+                  <th>画面の目的</th>
+                  <th>主要機能</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="template-row">
+
+                  <td>1</td>
+                  <td>ダッシュボード</td>
+                  <td>今日対応が必要な抽選や受取を確認する</td>
+                  <td>今日やること表示、期限・重要度の色分け表示</td>
+                </tr>
+                <tr class="template-row">
+                  <<td>2</td>
+                    <td>抽選一覧画面</td>
+                    <td>登録した抽選情報を一覧で確認する</td>
+                    <td>一覧表示、検索、絞り込み、詳細画面への移動</td>
+                </tr>
+                <tr class="template-row">
+                  <td>3</td>
+                  <td>抽選登録画面</td>
+                  <td>新しい抽選情報を登録する</td>
+                  <td>店舗名、商品名、応募日、当落発表日、受取期限などを入力する</td>
+                </tr>
+                <tr class="template-row">
+                  <td>4</td>
+                  <td>抽選詳細画面</td>
+                  <td>1件の抽選情報を詳しく確認する</td>
+                  <td>当落状況、受取期限、次にやること、編集・削除</td>
+                </tr>
+                <tr class="template-row">
+                  <td>5</td>
+                  <td>抽選編集画面</td>
+                  <td>登録済みの抽選情報や進捗を更新する</td>
+                  <td>当落結果、注文状況、受取状況、期限などを更新する</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </section>
+
+        <section class="section" id="sec3">
+          <h2 class="section-title"><span class="section-icon">3</span> ユーザーフロー</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">メインシナリオ <span class="required">必須</span></div>
+            <div class="fill-hint">ペルソナがサイトに訪問してから目的を達成するまでの動線（メインの行動パターン）</div>
+            <div class="fill-content">
+              <p>ダッシュボード → 抽選一覧 → 抽選詳細 → 抽選編集 → ダッシュボードへ戻る。また、ダッシュボードの「今日やること」から対象の抽選詳細へ移動し、当落確認や受取状況を更新する。</p>
+            </div>
+          </div>
+          <div class="fill-block">
+            <div class="fill-label">サブシナリオ <span class="optional">任意</span></div>
+            <div class="fill-hint">その他の行動パターン（1〜2パターン）</div>
+            <div class="fill-content">
+              <p>抽選登録画面から新しい抽選情報を登録し、抽選一覧に反映する。また、抽選一覧から検索や絞り込みを行い、目的の抽選詳細へ移動する。</p>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="section" id="sec4">
+          <h2 class="section-title"><span class="section-icon">4</span> URL設計</h2>
+
+          <div class="fill-block">
+            <div class="fill-label">URL一覧 <span class="required">必須</span></div>
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>URL</th>
+                  <th>HTTPメソッド</th>
+                  <th>画面/機能</th>
+                  <th>説明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="template-row">
+                  <td>/</td>
+                  <td>GET</td>
+                  <td>ダッシュボード</td>
+                  <td>今日対応が必要な抽選や受取を表示する</td>
+                </tr>
+                <tr class="template-row">
+                  <td>/lotteries</td>
+                  <td>GET</td>
+                  <td>抽選一覧画面</td>
+                  <td>登録した抽選情報を一覧表示する</td>
+                </tr>
+                <tr class="template-row">
+                  <td>/lotteries/new</td>
+                  <td>GET</td>
+                  <td>抽選登録画面</td>
+                  <td>新しい抽選情報を登録するフォームを表示する</td>
+                </tr>
+                <tr class="template-row">
+                  <td>/lotteries</td>
+                  <td>POST</td>
+                  <td>抽選登録処理</td>
+                  <td>入力された抽選情報を保存する</td>
+                </tr>
+                <tr class="template-row">
+                  <td>/lotteries/{id}</td>
+                  <td>GET</td>
+                  <td>抽選詳細画面</td>
+                  <td>指定した抽選情報の詳細を表示する</td>
+                </tr>
+                <tr class="template-row">
+                  <td>/lotteries/{id}/edit</td>
+                  <td>GET</td>
+                  <td>抽選編集画面</td>
+                  <td>登録済みの抽選情報を編集するフォームを表示する</td>
+                </tr>
+                <tr class="template-row">
+                  <td>/lotteries/{id}</td>
+                  <td>PUT</td>
+                  <td>抽選更新処理</td>
+                  <td>更新された抽選情報を保存する</td>
+                </tr>
+                <tr class="template-row">
+                  <td>/lotteries/{id}</td>
+                  <td>DELETE</td>
+                  <td>抽選削除処理</td>
+                  <td>指定した抽選情報を削除する</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
