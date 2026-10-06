@@ -897,3 +897,47 @@ a:hover {
 .card-catch th {
   background: #f0f2f5;
 }
+
+.card-catch form {
+  max-width: 520px;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.card-catch form p {
+  margin-bottom: 16px;
+}
+
+.card-catch input,
+.card-catch select {
+  width: 100%;
+  max-width: 360px;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.card-catch button {
+  padding: 10px 18px;
+  background: #111111;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+
+  .lottery-detail-card {
+    max-width: 520px;
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+  }
+
+  .lottery-detail-card p {
+    margin-bottom: 18px;
+    line-height: 1.7;
+  }
