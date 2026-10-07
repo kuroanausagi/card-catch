@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽選登録 - Card Catch</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .product-condition label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 8px 0;
+        }
+
+        .product-condition input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body class="card-catch">
+
+    <header class="card-catch-header">
+        <h1>Card Catch</h1>
+        <p>抽選情報をまとめて管理</p>
+    </header>
+
+    <h2>抽選登録</h2>
+
+    <form id="lotteryForm">
+
+        <p>
+            <label>店舗名</label><br>
+            <input type="text" id="shopName" required>
+        </p>
+
+        <p>
+            <label>商品名</label><br>
+            <input type="text" id="productName" required>
+        </p>
+
+        <p>
+            <label>応募締切</label><br>
+            <input type="date" id="deadline" required>
+        </p>
+
+        <p>
+            <label>状態</label><br>
+            <select id="status">
+                <option>未応募</option>
+                <option>応募済み</option>
+                <option>当選</option>
+                <option>落選</option>
+            </select>
+        </p>
+
+        <div class="product-condition">
+            <strong>商品状態</strong>
+
+            <label>
+                <input type="checkbox" id="noShrink">
+                シュリンクなし
+            </label>
+
+            <label>
+                <input type="checkbox" id="noPeri">
+                ぺりなし
+            </label>
+
+            <label>
+                <input type="checkbox" id="noBox">
+                箱なし
+            </label>
+        </div>
+
+        <br>
+
+        <button type="submit">登録する</button>
+        <a href="lotteries.html">一覧に戻る</a>
+
+    </form>
+
+    <script>
+        document.getElementById("lotteryForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const lottery = {
+                id: Date.now(),
+                shopName: document.getElementById("shopName").value,
+                productName: document.getElementById("productName").value,
+                deadline: document.getElementById("deadline").value,
+                status: document.getElementById("status").value,
+                noShrink: document.getElementById("noShrink").checked,
+                noPeri: document.getElementById("noPeri").checked,
+                noBox: document.getElementById("noBox").checked
+            };
+
+            const lotteries =
+                JSON.parse(localStorage.getItem("lotteries")) || [];
+
+            lotteries.push(lottery);
+
+            localStorage.setItem("lotteries", JSON.stringify(lotteries));
+
+            window.location.href = "lotteries.html";
+        });
+    </script>
+
+</body>
+
+</html>
