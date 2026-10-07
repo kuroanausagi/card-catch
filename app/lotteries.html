@@ -19,6 +19,11 @@
 
     <a href="lottery-form.html">新規登録</a>
 
+    <div class="lottery-search">
+        <label for="searchInput">検索</label>
+        <input type="text" id="searchInput" placeholder="店舗名・商品名で検索">
+    </div>
+
     <table>
         <thead>
             <tr>
@@ -30,33 +35,84 @@
             </tr>
         </thead>
 
-        <tbody id="lotteryTableBody">
-        </tbody>
+        <tbody id="lotteryList"></tbody>
     </table>
 
     <script>
         const lotteries =
             JSON.parse(localStorage.getItem("lotteries")) || [];
 
-        const tbody = document.getElementById("lotteryTableBody");
+        const tbody = document.getElementById("lotteryList");
+        const searchInput = document.getElementById("searchInput");
 
-        lotteries.forEach(function (lottery) {
-            const row = document.createElement("tr");
+        function getStatusClass(status) {
+            if (status === "未応募") {
+                return "status-unapplied";
+            }
 
-            row.innerHTML = `
-        <td>${lottery.shopName}</td>
-        <td>${lottery.productName}</td>
-        <td>${lottery.deadline}</td>
-        <td>${lottery.status}</td>
-        <td>
-          <a href="lottery-detail.html?id=${lottery.id}">
-            詳細を見る
-          </a>
-        </td>
-      `;
+            if (status === "応募済み") {
+                return "status-applied";
+            }
 
-            tbody.appendChild(row);
+            if (status === "当選") {
+                return "status-win";
+            }
+
+            if (status === "落選") {
+                return "status-lose";
+            }
+
+            return "";
+        }
+
+        function renderLotteries(items) {
+            tbody.innerHTML = "";
+
+            items.forEach(function (lottery) {
+                const row = document.createElement("tr");
+                const statusClass = getStatusClass(lottery.status);
+
+                row.innerHTML = `
+          <td>${lottery.shopName}</td>
+          <td>${lottery.productName}</td>
+          <td>${lottery.deadline}</td>
+          <td>
+            <span class="status ${statusClass}">
+              ${lottery.status}
+            </span>
+          </td>
+          <td>
+            <a href="lottery-detail.html?id=${lottery.id}">
+              詳細を見る
+            </a>
+          </td>
+        `;
+
+                tbody.appendChild(row);
+            });
+        }
+
+        searchInput.addEventListener("input", function () {
+            const keyword =
+                searchInput.value.trim().toLowerCase();
+
+            const filtered = lotteries.filter(function (lottery) {
+                const shop =
+                    (lottery.shopName || "").toLowerCase();
+
+                const product =
+                    (lottery.productName || "").toLowerCase();
+
+                return (
+                    shop.includes(keyword) ||
+                    product.includes(keyword)
+                );
+            });
+
+            renderLotteries(filtered);
         });
+
+        renderLotteries(lotteries);
     </script>
 
 </body>

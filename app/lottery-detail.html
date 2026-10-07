@@ -46,18 +46,23 @@
 
     </div>
 
+    <a id="editLink" href="#">編集する</a>
+    <button id="deleteButton" type="button">削除する</button>
     <a href="lotteries.html">一覧に戻る</a>
 
     <script>
         const params = new URLSearchParams(window.location.search);
         const id = Number(params.get("id"));
 
-        const lotteries =
+        let lotteries =
             JSON.parse(localStorage.getItem("lotteries")) || [];
 
         const lottery = lotteries.find(function (item) {
             return item.id === id;
         });
+
+        document.getElementById("editLink").href =
+            `lottery-edit.html?id=${id}`;
 
         if (lottery) {
             document.getElementById("shopName").textContent =
@@ -90,7 +95,32 @@
                 conditions.length > 0
                     ? conditions.join(" / ")
                     : "特になし";
+        } else {
+            alert("データが見つかりません。");
+            window.location.href = "lotteries.html";
         }
+
+        document.getElementById("deleteButton")
+            .addEventListener("click", function () {
+
+                const result =
+                    confirm("この抽選情報を削除しますか？");
+
+                if (!result) {
+                    return;
+                }
+
+                lotteries = lotteries.filter(function (item) {
+                    return item.id !== id;
+                });
+
+                localStorage.setItem(
+                    "lotteries",
+                    JSON.stringify(lotteries)
+                );
+
+                window.location.href = "lotteries.html";
+            });
     </script>
 
 </body>

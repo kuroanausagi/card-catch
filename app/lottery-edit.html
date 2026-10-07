@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽選編集 - Card Catch</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="card-catch">
+
+    <header class="card-catch-header">
+        <h1>Card Catch</h1>
+        <p>抽選情報をまとめて管理</p>
+    </header>
+
+    <h2>抽選編集</h2>
+
+    <form id="editForm">
+
+        <p>
+            <label for="shopName">店舗名</label><br>
+            <input type="text" id="shopName" required>
+        </p>
+
+        <p>
+            <label for="productName">商品名</label><br>
+            <input type="text" id="productName" required>
+        </p>
+
+        <p>
+            <label for="deadline">応募締切</label><br>
+            <input type="date" id="deadline" required>
+        </p>
+
+        <p>
+            <label for="status">状態</label><br>
+            <select id="status">
+                <option value="未応募">未応募</option>
+                <option value="応募済み">応募済み</option>
+                <option value="当選">当選</option>
+                <option value="落選">落選</option>
+            </select>
+        </p>
+
+        <p><strong>商品状態</strong></p>
+
+        <div class="product-condition">
+            <label>
+                <input type="checkbox" id="noShrink">
+                シュリンクなし
+            </label>
+
+            <label>
+                <input type="checkbox" id="noPeri">
+                ぺりなし
+            </label>
+
+            <label>
+                <input type="checkbox" id="noBox">
+                箱なし
+            </label>
+        </div>
+
+        <button type="submit">変更を保存</button>
+        <a id="backToDetail" href="lotteries.html">詳細に戻る</a>
+
+    </form>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const id = Number(params.get("id"));
+
+        const lotteries =
+            JSON.parse(localStorage.getItem("lotteries")) || [];
+
+        const index = lotteries.findIndex(function (item) {
+            return item.id === id;
+        });
+
+        if (index === -1) {
+            alert("編集するデータが見つかりません。");
+            window.location.href = "lotteries.html";
+        }
+
+        const lottery = lotteries[index];
+
+        document.getElementById("shopName").value =
+            lottery.shopName || "";
+
+        document.getElementById("productName").value =
+            lottery.productName || "";
+
+        document.getElementById("deadline").value =
+            lottery.deadline || "";
+
+        document.getElementById("status").value =
+            lottery.status || "未応募";
+
+        document.getElementById("noShrink").checked =
+            !!lottery.noShrink;
+
+        document.getElementById("noPeri").checked =
+            !!lottery.noPeri;
+
+        document.getElementById("noBox").checked =
+            !!lottery.noBox;
+
+        document.getElementById("backToDetail").href =
+            `lottery-detail.html?id=${id}`;
+
+        document.getElementById("editForm")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                lotteries[index] = {
+                    ...lotteries[index],
+                    shopName: document.getElementById("shopName").value,
+                    productName: document.getElementById("productName").value,
+                    deadline: document.getElementById("deadline").value,
+                    status: document.getElementById("status").value,
+                    noShrink: document.getElementById("noShrink").checked,
+                    noPeri: document.getElementById("noPeri").checked,
+                    noBox: document.getElementById("noBox").checked
+                };
+
+                localStorage.setItem(
+                    "lotteries",
+                    JSON.stringify(lotteries)
+                );
+
+                window.location.href =
+                    `lottery-detail.html?id=${id}`;
+            });
+    </script>
+
+</body>
+
+</html>
