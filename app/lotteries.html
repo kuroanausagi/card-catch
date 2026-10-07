@@ -2,35 +2,63 @@
 <html lang="ja">
 
 <head>
-    <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>抽選一覧 - Card Catch</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body class="card-catch">
-
 
     <header class="card-catch-header">
         <h1>Card Catch</h1>
         <p>抽選情報をまとめて管理</p>
     </header>
+
     <h2>抽選一覧</h2>
+
     <a href="lottery-form.html">新規登録</a>
-    <table border="1">
-        <tr>
-            <th>店舗名</th>
-            <th>商品名</th>
-            <th>状態</th>
-            <th>操作</th>
-        </tr>
-        <tr>
-            <td>カードショップA</td>
-            <td>商品名A</td>
-            <td>応募済み</td>
-            <td><a href="#">詳細を見る</a></td>
-        </tr>
+
+    <table>
+        <thead>
+            <tr>
+                <th>店舗名</th>
+                <th>商品名</th>
+                <th>締切</th>
+                <th>状態</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+
+        <tbody id="lotteryTableBody">
+        </tbody>
     </table>
+
+    <script>
+        const lotteries =
+            JSON.parse(localStorage.getItem("lotteries")) || [];
+
+        const tbody = document.getElementById("lotteryTableBody");
+
+        lotteries.forEach(function (lottery) {
+            const row = document.createElement("tr");
+
+            row.innerHTML = `
+        <td>${lottery.shopName}</td>
+        <td>${lottery.productName}</td>
+        <td>${lottery.deadline}</td>
+        <td>${lottery.status}</td>
+        <td>
+          <a href="lottery-detail.html?id=${lottery.id}">
+            詳細を見る
+          </a>
+        </td>
+      `;
+
+            tbody.appendChild(row);
+        });
+    </script>
+
 </body>
 
 </html>

@@ -941,3 +941,216 @@ a:hover {
     margin-bottom: 18px;
     line-height: 1.7;
   }
+
+  .card-catch input[type="checkbox"] {
+    width: auto;
+    margin: 0 8px 0 0;
+  }
+
+  .card-catch form label {
+    display: inline-flex;
+    align-items: center;
+  }
+
+
+  /* ===== Card Catch 共通デザイン ===== */
+
+  body.card-catch {
+    margin: 0;
+    min-height: 100vh;
+    padding: 48px;
+    box-sizing: border-box;
+    background: #f4f6f9;
+    color: #222;
+    font-family: Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  }
+
+  .card-catch .card-catch-header {
+    max-width: 900px;
+    margin-bottom: 36px;
+    padding: 28px 32px;
+    background: #111;
+    color: #fff;
+    border-radius: 18px;
+  }
+
+  .card-catch .card-catch-header h1 {
+    margin: 0 0 8px;
+    font-size: 38px;
+    letter-spacing: 1px;
+  }
+
+  .card-catch .card-catch-header p {
+    margin: 0;
+    color: #d9d9d9;
+  }
+
+  .card-catch h2 {
+    margin: 0 0 22px;
+    font-size: 28px;
+  }
+
+  /* ボタン */
+  .card-catch a,
+  .card-catch button {
+    display: inline-block;
+    padding: 11px 18px;
+    margin: 4px 8px 12px 0;
+    border: none;
+    border-radius: 10px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .card-catch a:hover,
+  .card-catch button:hover {
+    opacity: 0.75;
+  }
+
+  /* 一覧 */
+  .card-catch table {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 18px;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .card-catch th,
+  .card-catch td {
+    padding: 18px;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: left;
+  }
+
+  .card-catch th {
+    background: #eef1f5;
+    font-weight: bold;
+  }
+
+  .card-catch tbody tr:hover {
+    background: #fafafa;
+  }
+
+  /* 登録・編集 */
+  .card-catch form {
+    max-width: 520px;
+    padding: 32px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .card-catch form p {
+    margin: 0 0 20px;
+  }
+
+  .card-catch label,
+  .card-catch strong {
+    font-weight: bold;
+  }
+
+  .card-catch input[type="text"],
+  .card-catch input[type="date"],
+  .card-catch select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    margin-top: 7px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background: #fff;
+  }
+
+  /* チェックボックス */
+  .card-catch .product-condition {
+    margin-top: 8px;
+    margin-bottom: 18px;
+  }
+
+  .card-catch .product-condition label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+    font-weight: normal;
+  }
+
+  .card-catch .product-condition input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+  }
+
+  /* 詳細 */
+  .card-catch .lottery-detail-card {
+    max-width: 520px;
+    padding: 32px;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .card-catch .lottery-detail-card p {
+    margin: 0 0 20px;
+    line-height: 1.7;
+  }
+
+  .card-catch .lottery-detail-card strong {
+    display: inline-block;
+    margin-bottom: 4px;
+  }
+
+  /* スマホ */
+  @media (max-width: 700px) {
+    body.card-catch {
+      padding: 24px 16px;
+    }
+
+    .card-catch .card-catch-header {
+      padding: 22px;
+    }
+
+    .card-catch .card-catch-header h1 {
+      font-size: 30px;
+    }
+
+    .card-catch table {
+      font-size: 14px;
+    }
+
+    .card-catch th,
+    .card-catch td {
+      padding: 10px;
+    }
+  }
+}
+
+/* Card Catch ヘッダー最終調整 */
+body.card-catch header.card-catch-header {
+  max-width: 900px;
+  margin-bottom: 36px;
+  padding: 28px 32px;
+  background: #111 !important;
+  color: #fff !important;
+  border-radius: 18px;
+}
+
+body.card-catch header.card-catch-header h1 {
+  margin: 0 0 8px;
+  font-size: 38px;
+  color: #fff !important;
+}
+
+body.card-catch header.card-catch-header p {
+  margin: 0;
+  color: #d9d9d9 !important;
+}

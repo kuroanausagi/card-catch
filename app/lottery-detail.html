@@ -18,13 +18,80 @@
     <h2>抽選詳細</h2>
 
     <div class="lottery-detail-card">
-        <p><strong>店舗名</strong><br>カードショップA</p>
-        <p><strong>商品名</strong><br>商品名A</p>
-        <p><strong>応募締切</strong><br>2026/10/31</p>
-        <p><strong>状態</strong><br>応募済み</p>
+
+        <p>
+            <strong>店舗名</strong><br>
+            <span id="shopName"></span>
+        </p>
+
+        <p>
+            <strong>商品名</strong><br>
+            <span id="productName"></span>
+        </p>
+
+        <p>
+            <strong>応募締切</strong><br>
+            <span id="deadline"></span>
+        </p>
+
+        <p>
+            <strong>状態</strong><br>
+            <span id="status"></span>
+        </p>
+
+        <p>
+            <strong>商品状態</strong><br>
+            <span id="productCondition"></span>
+        </p>
+
     </div>
 
     <a href="lotteries.html">一覧に戻る</a>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const id = Number(params.get("id"));
+
+        const lotteries =
+            JSON.parse(localStorage.getItem("lotteries")) || [];
+
+        const lottery = lotteries.find(function (item) {
+            return item.id === id;
+        });
+
+        if (lottery) {
+            document.getElementById("shopName").textContent =
+                lottery.shopName;
+
+            document.getElementById("productName").textContent =
+                lottery.productName;
+
+            document.getElementById("deadline").textContent =
+                lottery.deadline;
+
+            document.getElementById("status").textContent =
+                lottery.status;
+
+            const conditions = [];
+
+            if (lottery.noShrink) {
+                conditions.push("シュリンクなし");
+            }
+
+            if (lottery.noPeri) {
+                conditions.push("ぺりなし");
+            }
+
+            if (lottery.noBox) {
+                conditions.push("箱なし");
+            }
+
+            document.getElementById("productCondition").textContent =
+                conditions.length > 0
+                    ? conditions.join(" / ")
+                    : "特になし";
+        }
+    </script>
 
 </body>
 
