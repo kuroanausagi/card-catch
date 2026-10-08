@@ -1177,3 +1177,28 @@ body.card-catch header.card-catch-header p {
   cursor: pointer;
   box-sizing: border-box;
 }
+
+@media (max-width: 600px) {
+  .card-catch table {
+    min-width: 720px;
+  }
+
+  .card-catch th,
+  .card-catch td {
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+  }
+}
+
+.card-catch .dashboard-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 20px;
+  max-width: 520px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.card-catch .dashboard-card h3 {
+  margin-top: 0;
+}
